@@ -42,3 +42,58 @@
    42  git config --global --edit
    43  history
    44  history >> commands2.txt
+    1  slavust@slavust-laptop:~$ uname -or
+    2  4.15.0-20-generic GNU/Linux
+    3  slavust@slavust-laptop:~$ lsb_release -irc
+    4  Distributor ID:	LinuxMint
+    5  Release:	19.1
+    6  Codename:	tessa
+    7  #!/bin/bash
+    8  files=(   jquery-jvectormap.js   lib/jquery-mousewheel.js   src/jvectormap.js   src/abstract-element.js   src/abstract-canvas-element.js   src/abstract-shape-element.js   src/svg-element.js   src/svg-group-element.js   src/svg-canvas-element.js   src/svg-shape-element.js   src/svg-path-element.js   src/svg-circle-element.js   src/svg-image-element.js   src/svg-text-element.js   src/vml-element.js   src/vml-group-element.js   src/vml-canvas-element.js   src/vml-shape-element.js   src/vml-path-element.js   src/vml-circle-element.js   src/vector-canvas.js   src/simple-scale.js   src/ordinal-scale.js   src/numeric-scale.js   src/color-scale.js   src/legend.js   src/data-series.js   src/proj.js   src/map-object.js   src/region.js   src/marker.js   src/map.js   src/multimap.js )
+    9  baseDir=`dirname $0`
+   10  counter=0
+   11  while [ $counter -lt ${#files[@]} ]; do   files[$counter]="$baseDir/${files[$counter]}";   let counter=counter+1; done
+   12  if [ -z "$1" ];   then     minified=jquery.jvectormap.min.js;   else     minified=$1; fi
+   13  if [ -a $minified ];   then     rm $minified; fi
+   14  cat ${files[*]} >> $minified
+   15  uglifyjs $minified -o $minified -c
+   16  history 
+   17  pwd
+   18  D;
+   19  D:
+   20  cd D:
+   21  pwd
+   22  cd gitPractice/
+   23  ls
+   24  ls -a
+   25  ls 
+   26  ls -a
+   27  git ls-files
+   28  echo "Good Afternoon" >> afternoon.txt
+   29  git add .
+   30  git status
+   31  git rm --cached afternoon.txt
+   32  git status
+   33  git log
+   34  vi afternoon.txt
+   35  cat afternoon.txt
+   36  git status
+   37  git commit -a
+   38  git add .
+   39  git commit -a
+   40  cat afternoon.txt 
+   41  git log
+   42  git config --global --edit
+   43  history
+   44  history >> commands2.txt
+   45  git commit --amend --reset-author
+   46  git add .
+   47  git commit -a
+   48  git status
+   49  git branch
+   50  git branch dev
+   51  git branch
+   52  git checkout -b dev
+   53  git checkout dev
+   54  git branch
+   55  history >> commands2.txt
