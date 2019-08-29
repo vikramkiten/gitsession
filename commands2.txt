@@ -123,3 +123,99 @@
 `
   120  cat commands2.txt 
   121  history > commands2.txt 
+    1  slavust@slavust-laptop:~$ uname -or
+    2  4.15.0-20-generic GNU/Linux
+    3  slavust@slavust-laptop:~$ lsb_release -irc
+    4  Distributor ID:	LinuxMint
+    5  Release:	19.1
+    6  Codename:	tessa
+    7  #!/bin/bash
+    8  files=(   jquery-jvectormap.js   lib/jquery-mousewheel.js   src/jvectormap.js   src/abstract-element.js   src/abstract-canvas-element.js   src/abstract-shape-element.js   src/svg-element.js   src/svg-group-element.js   src/svg-canvas-element.js   src/svg-shape-element.js   src/svg-path-element.js   src/svg-circle-element.js   src/svg-image-element.js   src/svg-text-element.js   src/vml-element.js   src/vml-group-element.js   src/vml-canvas-element.js   src/vml-shape-element.js   src/vml-path-element.js   src/vml-circle-element.js   src/vector-canvas.js   src/simple-scale.js   src/ordinal-scale.js   src/numeric-scale.js   src/color-scale.js   src/legend.js   src/data-series.js   src/proj.js   src/map-object.js   src/region.js   src/marker.js   src/map.js   src/multimap.js )
+    9  baseDir=`dirname $0`
+   10  counter=0
+   11  while [ $counter -lt ${#files[@]} ]; do   files[$counter]="$baseDir/${files[$counter]}";   let counter=counter+1; done
+   12  if [ -z "$1" ];   then     minified=jquery.jvectormap.min.js;   else     minified=$1; fi
+   13  if [ -a $minified ];   then     rm $minified; fi
+   14  cat ${files[*]} >> $minified
+   15  uglifyjs $minified -o $minified -c
+   16  cd D:
+   17  cd gitPractice/
+   18  git -v
+   19  git remote -v
+   20  git branch
+   21  history
+   22  git push -u origin master
+   23  git fetch https://github.com/vikramkiten/gitsession.git
+   24  git branch 
+   25  git ls-files
+   26  git commit .
+   27  git push -u origin master
+   28  git pull https://github.com/vikramkiten/gitsession.git
+   29  git create add .
+   30  git status
+   31  git commit .
+   32  git push https://github.com/vikramkiten/gitsession.git
+   33  git push --help
+   34  git push --help
+   35  git push --force-with-lease https://github.com/vikramkiten/gitsession.git
+   36  git push --force-with-lease --delete https://github.com/vikramkiten/gitsession.git
+   37  git push --force-with-lease --mirror https://github.com/vikramkiten/gitsession.git
+   38  git ls-files
+   39  cat afternoon.txt
+   40  echo "Another text" >> afternoon.txt
+   41  git push https://github.com/vikramkiten/gitsession.git
+   42  git add .
+   43  git commit .
+   44  git push https://github.com/vikramkiten/gitsession.git
+   45  git push --mirror https://github.com/vikramkiten/gitsession.git
+   46  git push -u origin master
+   47  git clone <Zoom>
+   48    <img height="300" width="400" src="https://source.unsplash.com/random/300x400" />
+   49  </Zoom>
+   50  git checkout 
+   51  git checkout origin master
+   52  git checkout origin/master
+   53  git checkout -b e13b2a7
+   54  git ls-files
+   55  git add.
+   56  git add .
+   57  git commit .
+   58  git checkout master
+   59* git
+   60  git merge master
+   61  git checkout origin/master 9fe2e7266ab3e67176029a5734e5ed08f7d1947c
+   62  cd ..
+   63  pwd
+   64  git clone https://github.com/vikramkiten/gitsession.git
+   65  ls
+   66  cd getsession
+   67  cd gitsession
+   68  git log
+   69  git statusa
+   70  git status
+   71  git branches
+   72  git branch
+   73  git checkout -b 'cherry'
+   74  git checkout
+   75  git branch
+   76  git ls-files
+   77  touch tea.txt
+   78  git ls-files
+   79  echo "tea" >> tea.txt
+   80  git ls-files
+   81  ls
+   82  git add .
+   83  git commit
+   84  git commit .
+   85  git ls-files
+   86  git checkout master
+   87  git log
+   88  git checkout tea
+   89  git branch
+   90  git checkout branch
+   91  git checkout cherry
+   92  git log
+   93  git checkout master
+   94  git cherry-pick 3042f56b525e4657db76c775827756627093bc3c
+   95  git ls-files
+   96  history >> commands2.txt
